@@ -20,11 +20,17 @@ body {
 
  h1 {
   margin: 20px 16px 8px 16px;
-  color: #111827;
+  color: #FFFFFF;
   text-align: center;
   font-size: 40px;
-  margin-bottom: 20px;
   font-weight: 600;
+}
+
+#user-info p{
+  color: #A0A0A0;
+  margin-bottom: 20px;
+  font-weight: 400;
+  
 }
 #error-message{
   text-align: center;
@@ -34,12 +40,13 @@ body {
 
 #login-page {
   padding: 20px 16px;
-  background: #f5f7fb;
+  background: #121212;
   min-height: 100vh;
 }
 
+
 #user-info{
-  background: white;
+  background: #1E1E1E;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
@@ -60,13 +67,14 @@ body {
 .form-group label {
   font-size: 14px;
   margin-bottom: 6px;
-  color: #374151;
+  color: #A0A0A0;
 }
 
 .form-group input  {
   padding: 12px 14px;
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  background-color: #2A2A2A;
+border: 1px solid #3A3A3A;
   font-size: 14px;
   outline: none;
   transition: 0.2s;
@@ -86,8 +94,8 @@ body {
   padding: 14px;
   border-radius: 14px;
   border: none;
-  background: #10b981;
-  color: white;
+  background-color: #D49A6A; 
+  color:#FFFFFF;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -95,7 +103,7 @@ body {
 }
 
 .submit-btn:hover {
-  background: #059669;
+  background-color: #C28A5C;
   transform: translateY(-2px);
 }
 
@@ -135,16 +143,120 @@ a{
   text-decoration: none;
 }
 
-header h2 {
+#dashboard-overview h2 {
   font-size: 24px;
   font-weight: 700;
   margin: 20px 16px 8px 16px;
+  
+}
+
+#dashboard-overview p {
+  font-size: 14px;
+  font-weight: 400;
+  
+  margin: 0 16px 20px 16px;
+}
+
+.dashboard-stats {
+  display: flex;
+  gap: 12px;
+  padding: 0 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  border-radius: 16px;
+  padding: 18px 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.card .title {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.card .value {
+  font-size: 20px;
+  font-weight: 700;
   color: #111827;
 }
 
-header p {
-  font-size: 14px;
-  font-weight: 400;
-  color: #6b7280;
-  margin: 0 16px 20px 16px;
+.total-fields {
+  background: #0f9d58;
+  color: white;
 }
+
+.total-fields .title,
+.total-fields .value {
+  color: white;
+}
+
+.assigned-fields .value {
+  color: #16a34a;
+}
+
+.completed-updates .value {
+  color: #111827;
+}
+
+
+.field-lists {
+  display: flex;
+  gap: 12px;
+  padding: 0 16px;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.field-lists::-webkit-scrollbar {
+  display: none;
+}
+
+.field-item {
+  min-width: 120px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px;
+  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.field-item:hover {
+  transform: translateY(-4px);
+}
+
+.field-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.field-type {
+  font-size: 13px;
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.planting-date .current-stage {
+  font-size: 12px;
+  color: #6b7280;
+}
+

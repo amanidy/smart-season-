@@ -29,19 +29,62 @@
    
     <div id="content">
       <header>
-        <h2>Hello,Coordinator A</h2>
-    <p>Ready to start tracking your crops?</p>
-    
-    <h2>📊 Dashboard</h2
-    >
+         <button id="menu-btn">Menu</button>
+      <button id="logout-btn">Logout</button>
+      
       </header>
       
+      <section id="dashboard-overview">
+        <h2>Hello,<span class="display-user">Coordinator A</span></h2>
+    <p>Ready to start tracking your crops?</p>
     
-      <button id="menu-btn">Menu</button>
-      <button id="logout-btn">Logout</button>
-      <section id="field-list">
+    <section class="dashboard-stats">
+      <div class="card total-fields">
+        <h3>📊</h3>
+        <p class="title">Total Fields</p>
+        <p class="value">3</p>
+      </div>
+      <div class="card assigned-fields">
+        <h3>📝</h3>
+        <p class="title">Assigned Fields</p>
+        <p id="sales" class="value">0</p>
+      </div>
+      <div class="card completed-updates">
+        <h3>✅📜</h3>
+        <p class="title">Completed Updates</p>
+        <p class="value">18</p>
+      </div>
+     
+    </section>
+     <p>Each field list contains: field name,crop type, planting date,current stage and action buttons</p>
+    
+    <section class="field-list">
+      <h2>Field List</h2>
+      <p>Showing 3 fields</p>
+    <p class="state-text">Not fields yet!</p>
+    <div class="field-lists" id="list-container">
+      <div class="field-item">
+        <div class="field-name">North Paddock</div>
+        <div class="field-type">Maize</div>
+        <div class="planting-date">2026-05-18</div>
+        <div class="current-stage">Growing</div>
         
+        <button class="view-btn" >View</button>
+        <button class="delete-btn" >Delete</button>
+        <button class="assign-btn" >Assign</button>
+      </div>
+      
+    </div>
+      
+    </section>
+      
+    </section>
+    
       </section>
+      
+    
+     
+      
       
     </div>
     
