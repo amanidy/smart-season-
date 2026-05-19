@@ -18,7 +18,7 @@ body {
   display: block;
 }
 
- h1 {
+.heading h1 {
   margin: 20px 16px 8px 16px;
   color: #FFFFFF;
   text-align: center;
@@ -260,3 +260,67 @@ a{
   color: #6b7280;
 }
 
+.add-view{
+  background: #1E1E1E;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.add-view h1 {
+  margin: 20px 16px 8px 16px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.add-view p{
+  color: #A0A0A0;
+  margin-bottom: 20px;
+  font-weight: 400;
+  
+}
+
+.submit-btn:hover {
+  background-color: #C28A5C;
+  transform: translateY(-2px);
+}
+.add-btn{
+
+  width: 40%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background-color: #D49A6A; 
+  color:#FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+
+}
+.add-btn:hover {
+  background-color: #C28A5C;
+  transform: translateY(-2px);
+}
+
+.cancel-btn{
+
+  width: 40%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background-color: #C28A5C;
+  color:#FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+
+}
+.cancel-btn:hover {
+  
+  background-color: #D49A6A; 
+  transform: translateY(-2px);
+}
