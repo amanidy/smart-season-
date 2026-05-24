@@ -6,10 +6,34 @@ console.log(fields)
 
 console.log("Hello dashboard!");
 
-const sidebar = document.getElementById('side-nav');
 
-document.getElementById('menu-btn').onclick = () => sidebar.classList.toggle('active');
-document.getElementById('close-btn').onclick = () => sidebar.classList.remove('active');
+const menuBtn = document.getElementById('menu-btn');
+const closeBtn = document.getElementById('close-btn');
+const sideNav = document.getElementById('side-nav');
+const overlay = document.getElementById('overlay');
+
+function openNav() {
+  sideNav.classList.add('active');
+  overlay.classList.add('active');
+}
+
+function closeNav() {
+  sideNav.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+menuBtn.addEventListener('click', openNav);
+closeBtn.addEventListener('click', closeNav);
+overlay.addEventListener('click', closeNav);
+
+
+document.querySelectorAll('#side-nav nav a').forEach(link => {
+  link.addEventListener('click', function () {
+    document.querySelectorAll('#side-nav nav a').forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+    closeNav();
+  });
+});
 
 
 //fields length functionality 

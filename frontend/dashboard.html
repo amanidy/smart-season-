@@ -1,146 +1,143 @@
 
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../css/style.css" title="" type="" />
-  <title>Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartSeason</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
-
 <body>
-  <div id="app">
-    <aside id="side-nav">
-       <nav>
+
+<div id="app">
+
+  
+  <div id="overlay"></div>
+
+  
+  <aside id="side-nav">
+    <div class="nav-brand">Smart<span>Season</span></div>
+
+    <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Field List</a></li>
-        <li><a href="#">Field Updates</a></li>
-        <li><a href="#">Field Details</a></li>
-        <li><a href="#">Field Agents</a></li>
-        
+        <li><a href="#" class="active"><span class="icon">🏠</span> Home</a></li>
+        <li><a href="#"><span class="icon">🗂️</span> Field List</a></li>
+        <li><a href="#"><span class="icon">🔄</span> Field Updates</a></li>
+        <li><a href="#"><span class="icon">🔍</span> Field Details</a></li>
+        <li><a href="#"><span class="icon">👤</span> Field Agents</a></li>
       </ul>
     </nav>
-    
-    <button id="close-btn">X</button>
-      
-    </aside>
-   
-    <div id="content">
-      <header>
-         <button id="menu-btn">Menu</button>
-      <button id="logout-btn">Logout</button>
-      
-      </header>
-      
-      <section id="dashboard-overview">
-        <h2>Hello,<span class="display-user">Coordinator A</span></h2>
-    <p>Ready to start tracking your crops?</p>
-    
-    <section class="dashboard-stats">
-      <div class="card total-fields">
-        <h3>📊</h3>
-        <p class="title">Total Fields</p>
-        <p class="value">3</p>
-      </div>
-      <div class="card assigned-fields">
-        <h3>📝</h3>
-        <p class="title">Assigned Fields</p>
-        <p id="sales" class="value">0</p>
-      </div>
-      <div class="card completed-updates">
-        <h3>✅📜</h3>
-        <p class="title">Completed Updates</p>
-        <p class="value">18</p>
-      </div>
-     
-    </section>
-     <p>Each field list contains: field name,crop type, planting date,current stage and action buttons</p>
-    
-    <section class="field-list">
-      <h2>Field List</h2>
-      <p>Showing <span id="fieldLength">3</span>  fields</p>
-    <p class="state-text">Not fields yet!</p>
-    <div class="field-lists" id="list-container">
-      <div class="field-item">
-        <div class="field-name">North Paddock</div>
-        <div class="field-type">Maize</div>
-        <div class="planting-date">2026-05-18</div>
-        <div class="current-stage">Growing</div>
-        
-        <button class="view-btn" >View</button>
-        <button class="delete-btn" >Delete</button>
-        <button class="assign-btn" >Assign</button>
-      </div>
-      
-    </div>
-      
-    </section>
-      
-    </section>
-    
-      </section>
-      
-    
-     <section class="add-view">
-       <header>
-               <h1>Add Field</h1
-      >
-      <p>Using this form add a new field list</p>
-       </header>
-       
-       <div class="form-group">
-        <label for="name">Name:</label>
-      <input type="text" name="name" id="name" value="" placeholder="Enter a field name" />
-      </div>
-      
-      <div class="form-group">
-         <label for="cropType">Crop Type:</label>
-      <input type="text" name="cropType" id="cropType" value="" placeholder="Enter the field crop type" />
-      </div>
-      
-      
-      <div class="form-group">
-         <label for="currenStage">Current Stage:</label>
-      <input type="text" name="currentStage" id="currentStage" value="" placeholder="Enter crop's current stage" />
-      </div>
-      
-      <div class="form-group">
-        <label for="plantingDate">Planting Date:</label>
-      <input type="text" name="plantingDate" id="plantingDate" value="" placeholder="Enter crop's planting date" />
-      </div>
-      
-       <button class="add-btn" type="submit">Add</button>
-      
-       <button class="cancel-btn" type="submit">Cancel</button>
-       
-     </section>
-     
-     
-     <section class="viewDetails" style="display: none;">
-       <div>
-         <h2>Field Details</h2>
-         <div class="field-info">
-           
-         </div>
-       </div>
-       <div>
-         <h2>Update form</h2>
-        <form id="update-form">
-          
-        </form>
-       </div>
-     </section>
-      
-      
-    </div>
-    
-  </div>
-  
-  <script src="../js/dashboard.js" type='module'>
-    
-  </script>
-</body>
 
+    <button id="close-btn">✕ Close Menu</button>
+  </aside>
+
+  
+  <div id="content">
+
+    <header>
+      <button id="menu-btn">☰ Menu</button>
+      <div class="header-right">
+        <span class="header-user">Coordinator A</span>
+        <button id="logout-btn">Logout</button>
+      </div>
+    </header>
+
+    <div class="page-body">
+
+      
+      <div class="greeting">
+        
+        <p>Ready to start tracking your crops?</p>
+      </div>
+
+      
+      <div class="dashboard-stats">
+        <div class="card total-fields">
+          <span class="card-icon">📊</span>
+          <p class="title">Total Fields</p>
+          <p class="value">3</p>
+        </div>
+        <div class="card assigned-fields">
+          <span class="card-icon">📝</span>
+          <p class="title">Assigned Fields</p>
+          <p class="value" id="assignedCount">0</p>
+        </div>
+        <div class="card completed-updates">
+          <span class="card-icon">✅</span>
+          <p class="title">Completed Updates</p>
+          <p class="value">18</p>
+        </div>
+      </div>
+
+      <
+      <div class="section-header">
+        <h2>Field List</h2>
+        <span class="badge"><span id="fieldLength">1</span> fields</span>
+          <p class="state-text">Not fields yet!</p>
+      </div>
+      <p class="hint-text">Each field shows: name · crop type · planting date · current stage · actions</p>
+
+      <div class="field-lists" id="list-container">
+        <div class="field-item">
+          <div class="field-name">North Paddock</div>
+          <div class="field-type">Maize</div>
+          <div class="planting-date">🗓 2026-05-18</div>
+          <div class="current-stage">🌱 Growing</div>
+          <div class="field-actions">
+            <button class="view-btn">View</button>
+            <button class="delete-btn">Delete</button>
+            <button class="assign-btn">Assign</button>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="add-view">
+        <div class="form-header">
+          <h1>Add Field</h1>
+          <p>Fill in the details below to register a new field.</p>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Field Name</label>
+            <input type="text" id="name" placeholder="e.g. North Paddock" />
+          </div>
+          <div class="form-group">
+            <label for="cropType">Crop Type</label>
+            <input type="text" id="cropType" placeholder="e.g. Maize, Wheat" />
+          </div>
+          <div class="form-group">
+            <label for="currentStage">Current Stage</label>
+            <input type="text" id="currentStage" placeholder="e.g. Germination, Growing" />
+          </div>
+          <div class="form-group">
+            <label for="plantingDate">Planting Date</label>
+            <input type="date" id="plantingDate" />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="add-btn">Add Field</button>
+          <button class="cancel-btn">Cancel</button>
+        </div>
+      </div>
+
+      
+      <div class="viewDetails" id="viewDetails">
+        <h2>Field Details</h2>
+        <div class="field-info"></div>
+        <h2 style="margin-top:24px;">Update Form</h2>
+        <form id="update-form"></form>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script type="module" src="../js/dashboard.js"></script>
+</body>
 </html>
