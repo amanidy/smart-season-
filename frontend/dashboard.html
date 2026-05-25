@@ -7,6 +7,7 @@
   <title>SmartSeason</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
@@ -21,13 +22,33 @@
     <div class="nav-brand">Smart<span>Season</span></div>
 
     <nav>
-      <ul>
-        <li><a href="#" class="active"><span class="icon">🏠</span> Home</a></li>
-        <li><a href="#"><span class="icon">🗂️</span> Field List</a></li>
-        <li><a href="#"><span class="icon">🔄</span> Field Updates</a></li>
-        <li><a href="#"><span class="icon">🔍</span> Field Details</a></li>
-        <li><a href="#"><span class="icon">👤</span> Field Agents</a></li>
-      </ul>
+     <ul>
+  <li>
+    <a href="#" class="active">
+      <span class="icon"><i class="fa-solid fa-house"></i></span> Home
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <span class="icon"><i class="fa-solid fa-layer-group"></i></span> Field List
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <span class="icon"><i class="fa-solid fa-arrows-rotate"></i></span> Field Updates
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span> Field Details
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <span class="icon"><i class="fa-solid fa-user-group"></i></span> Field Agents
+    </a>
+  </li>
+</ul>
     </nav>
 
     <button id="close-btn">✕ Close Menu</button>
@@ -52,26 +73,26 @@
         <p>Ready to start tracking your crops?</p>
       </div>
 
-      
       <div class="dashboard-stats">
-        <div class="card total-fields">
-          <span class="card-icon">📊</span>
-          <p class="title">Total Fields</p>
-          <p class="value">3</p>
-        </div>
-        <div class="card assigned-fields">
-          <span class="card-icon">📝</span>
-          <p class="title">Assigned Fields</p>
-          <p class="value" id="assignedCount">0</p>
-        </div>
-        <div class="card completed-updates">
-          <span class="card-icon">✅</span>
-          <p class="title">Completed Updates</p>
-          <p class="value">18</p>
-        </div>
-      </div>
-
-      <
+  <div class="card total-fields">
+    <span class="card-icon"><i class="fa-solid fa-map"></i></span>
+    <p class="title">Total Fields</p>
+    <p class="value">3</p>
+  </div>
+  
+  <div class="card assigned-fields">
+    <span class="card-icon"><i class="fa-solid fa-clipboard-list"></i></span>
+    <p class="title">Assigned Fields</p>
+    <p class="value" id="assignedCount">0</p>
+  </div>
+  
+  <div class="card completed-updates">
+    <span class="card-icon"><i class="fa-solid fa-circle-check"></i></span>
+    <p class="title">Completed Updates</p>
+    <p class="value">18</p>
+  </div>
+</div>
+      
       <div class="section-header">
         <h2>Field List</h2>
         <span class="badge"><span id="fieldLength">1</span> fields</span>
