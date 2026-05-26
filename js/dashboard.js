@@ -2,9 +2,6 @@
 
 import {fields} from "../js/mockData.js"
 
-console.log(fields)
-
-console.log("Hello dashboard!");
 
 
 const menuBtn = document.getElementById('menu-btn');
@@ -81,4 +78,22 @@ function renderFields() {
   }
   
   renderFields();
+
+
+const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+const role = currentUser.role;
+const name = currentUser.name;
+
+//functionality to display username 
+document.querySelector('.header-user').textContent = name;
+
+
+//logout authentication 
+document.getElementById('logout-btn').addEventListener('click',()=> {
+  localStorage.removeItem('currentUser');
+  window.location.href='index.html'
+})
+
+
 
