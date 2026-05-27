@@ -34,6 +34,8 @@ document.querySelectorAll('#side-nav nav a').forEach(link => {
 
 
 //fields length functionality 
+const fieldValue = document.querySelector('.value');
+fieldValue.textContent = fields.length;
 const fieldLengthEl= document.getElementById('fieldLength');
 fieldLengthEl.textContent = fields.length;
 
@@ -60,14 +62,14 @@ function renderFields() {
     }
 
     fieldsEl.innerHTML = fields.map(field => `
-      <div class="field-item">
+      <div  class="field-item">
         <div class="field-name">Field Name: ${field.name}</div>
         <div class="crop-type">Crop type: ${field.cropType}</div>
         <div class="planting-date">Planting Date: ${field.plantingDate}</div>
         <div class="crop-stage">Crop Stage: ${field.stage}</div>
         <div class="assignedTo">Assigned To: ${field.assignedTo}</div>
         
-        <button class="view-btn" onclick="handleView(${field.id})">View</button>
+        <button class="view-btn" onclick="handleView('${field.id}')">View</button>
         <button class="delete-btn" onclick="handleDelete(${field.id})">Delete</button>
         <button class="assign-btn" onclick="handleAssign(${field.id})">Assign</button>
         <button class="delete-btn" onclick="handleEdit(${field.id})">Edit</button>
@@ -96,4 +98,38 @@ document.getElementById('logout-btn').addEventListener('click',()=> {
 })
 
 
+//getting the fields that are assigned 
+
+const assignedFields = fields.filter(f => f.assignedTo && f.assignedTo.trim() !== '')
+
+console.log(assignedFields.length)
+
+
+let assignedCount = document.getElementById('assignedCount')
+
+assignedCount.textContent = assignedFields.length;
+
+//selected field to show the details 
+
+window.handleView = (id) => {
+  const selectedField = fields.find(f=> f.id === id);
+  if(selectedField){
+    
+    document.getElementById('detail-crop').textContent = selectedField.cropType;
+    document.getElementById('detail-stage').textContent = selectedField.stage;
+    document.getElementById('detail-date').textContent = selectedField.plantingDate;
+    
+    document.getElementById('detail-name').textContent = selectedField.name;
+  document.getElementById('detail-notes').textContent = selectedField.details.notes;
+  document.getElementById('detail-soil').textContent = selectedField.details.soilType;
+  document.getElementById('detail-irrigation').textContent = selectedField.details.irrigation;
+  
+  document.getElementById('viewDetails').style.display = 'block';
+    
+    
+    
+  }else{
+    alert('Field not found')
+  }
+}
 

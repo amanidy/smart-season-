@@ -24,12 +24,12 @@
     <nav>
      <ul>
   <li>
-    <a href="#" class="active">
+    <a href="#dashboard-stats" class="active">
       <span class="icon"><i class="fa-solid fa-house"></i></span> Home
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="#list-container">
       <span class="icon"><i class="fa-solid fa-layer-group"></i></span> Field List
     </a>
   </li>
@@ -39,7 +39,7 @@
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="#viewDetails">
       <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span> Field Details
     </a>
   </li>
@@ -73,11 +73,11 @@
         <p>Ready to start tracking your crops?</p>
       </div>
 
-      <div class="dashboard-stats">
+      <div id="dashboard-stats" class="dashboard-stats">
   <div class="card total-fields">
     <span class="card-icon"><i class="fa-solid fa-map"></i></span>
     <p class="title">Total Fields</p>
-    <p class="value">3</p>
+    <p class="value"></p>
   </div>
   
   <div class="card assigned-fields">
@@ -149,10 +149,24 @@
       
       <div class="viewDetails" id="viewDetails">
         <h2>Field Details</h2>
-        <div class="field-info"></div>
-        <h2 style="margin-top:24px;">Update Form</h2>
+        <div class="field-info">
+     
+       <p><strong>Name:</strong> <span id="detail-name"></span></p>   
+  <p><strong>Crop:</strong> <span id="detail-crop"></span></p>
+  <p><strong>Stage:</strong> <span id="detail-stage"></span></p>
+  <p><strong>Planted:</strong> <span id="detail-date"></span></p>
+    <p><strong>Notes:</strong> <span id="detail-notes"></span></p>
+      <p><strong>Soil:</strong> <span id="detail-soil"></span></p>
+        <p><strong>Irrigation:</strong> <span id="detail-irrigation"></span></p>
+        </div>
+        </div>
+        
+        <div id="update-form">
+          <h2 style="margin-top:24px;">Update Form</h2>
         <form id="update-form"></form>
-      </div>
+        </div>
+        
+      
 
     </div>
   </div>
