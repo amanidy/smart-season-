@@ -2,6 +2,7 @@
 
 import {fields} from "../js/mockData.js"
 
+import computeStatus from "../js/utils.js"
 
 
 const menuBtn = document.getElementById('menu-btn');
@@ -68,6 +69,8 @@ function renderFields() {
         <div class="planting-date">Planting Date: ${field.plantingDate}</div>
         <div class="crop-stage">Crop Stage: ${field.stage}</div>
         <div class="assignedTo">Assigned To: ${field.assignedTo}</div>
+         <div class="status">Status: ${computeStatus(field)}</div>
+        
         
         <button class="view-btn" onclick="handleView('${field.id}')">View</button>
         <button class="delete-btn" onclick="handleDelete(${field.id})">Delete</button>
@@ -132,4 +135,6 @@ window.handleView = (id) => {
     alert('Field not found')
   }
 }
+
+
 
