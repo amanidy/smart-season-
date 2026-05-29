@@ -4,6 +4,10 @@ import {fields} from "../js/mockData.js"
 
 import computeStatus from "../js/utils.js"
 
+import requireAuth from "../js/router.js"
+
+requireAuth();
+
 
 const menuBtn = document.getElementById('menu-btn');
 const closeBtn = document.getElementById('close-btn');
