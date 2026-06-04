@@ -111,3 +111,32 @@ export const fields = [
     }
   }
 ]
+
+
+//updates 
+export const updates = [
+  {
+    id: 'upd1',
+    fieldId: 'f1',
+    agentId: 'u2',
+    newStage: 'growing',
+    notes: 'Armyworm scouting done. No infestation found. Crop canopy closing well.',
+    updatedAt: '2026-01-27T09:15:00'
+  },
+  {
+    id: 'upd2',
+    fieldId: 'f3',
+    agentId: 'u3',
+    newStage: 'ready',
+    notes: 'Brix test passed at 5.2. Harvest crew scheduled for tomorrow 6am.',
+    updatedAt: '2026-03-28T16:42:00'
+  },
+  {
+    id: 'upd3',
+    fieldId: 'f6',
+    agentId: 'u1',
+    newStage: 'growing',
+    notes: 'Field assigned to u2. Soil moisture low, irrigation plan updated.',
+    updatedAt: '2026-04-25T11:05:00'
+  }
+];
