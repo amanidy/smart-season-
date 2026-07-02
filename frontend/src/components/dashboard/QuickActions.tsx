@@ -1,11 +1,13 @@
+import Button from "../ui/Button";
+
 export default function QuickActions() {
   return (
     <section>
-      <button>Register Field</button>
+      <Button>Register Field</Button>
 
-      <button>Add Update</button>
+      <Button>Add Update</Button>
 
-      <button>View Reports</button>
+      <Button>View Reports</Button>
     </section>
   );
 }
