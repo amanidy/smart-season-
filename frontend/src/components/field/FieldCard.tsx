@@ -3,25 +3,19 @@ import Badge from "@/components/ui/Badge";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import DeleteFieldButton from "./DeleteFieldButton";
+import { Field } from "@/types/field";
 
-type Field = {
-  id: string;
-  name: string;
-  crop: string;
-  location: string;
-  acreage: number;
-  status: string;
-  agent: string;
-};
 
-type Props = {
+interface Props {
   field: Field;
-};
+  role: "ADMIN" | "AGENT";
+}
 
-const userRole = "ADMIN"; // Change to AGENT to test
+
 
 export default function FieldCard({
-  field,
+   field,
+  role,
 }: Props) {
   return (
     <Card>
@@ -49,10 +43,7 @@ export default function FieldCard({
             <strong>Acreage:</strong> {field.acreage} Acres
           </p>
 
-          <p>
-            <strong>Assigned Agent:</strong>{" "}
-            {field.agent}
-          </p>
+          
         </div>
 
         <div className="flex gap-2">
@@ -68,7 +59,7 @@ export default function FieldCard({
             </Button>
           </Link>
 
-          {userRole === "ADMIN" && (
+          {role === "ADMIN" && (
             <DeleteFieldButton />
           )}
         </div>
