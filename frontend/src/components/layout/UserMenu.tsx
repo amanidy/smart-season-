@@ -5,7 +5,7 @@ export default function UserMenu() {
         A
       </div>
 
-      <span>Arnold</span>
+      <span className="text-black">Arnold</span>
     </div>
   );
 }

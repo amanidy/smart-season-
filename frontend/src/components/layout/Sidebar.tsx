@@ -6,7 +6,7 @@ export default function Sidebar() {
     <aside className="w-64 border-r bg-white p-6">
       <Logo />
 
-      <nav className="mt-8 flex flex-col gap-4">
+      <nav className="mt-8 flex text-black flex-col gap-4">
         <Link href="/dashboard">Dashboard</Link>
         <Link href="/fields">Fields</Link>
         <Link href="/weather">Weather</Link>

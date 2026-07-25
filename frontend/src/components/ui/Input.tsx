@@ -13,13 +13,13 @@ export default function Input({
 }: Props) {
   return (
     <div className="space-y-2">
-      <label className="font-medium">
+      <label className="font-medium text-black">
         {label}
       </label>
 
       <input
         {...props}
-        className="w-full rounded-md border border-gray-300 px-4 py-2 outline-none focus:border-green-600"
+        className="w-full rounded-md border border-gray-300 px-4 text-gray-900 py-2 outline-none focus:border-green-600"
       />
     </div>
   );
