@@ -8,6 +8,7 @@ export default function CreateFieldPage() {
       </h1>
 
       <FieldForm />
+
     </div>
   );
 }
