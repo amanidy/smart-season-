@@ -1,7 +1,16 @@
+"use client";
+
+import { useState } from "react";
 import Input from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
+import { fieldService } from "@/services/field.service";
 
 export default function FieldForm() {
+  const [name, setName] = useState("");
+  const [crop, setCrop] = useState("");
+  const [location, setLocation] = useState("");
+  const [acreage, setAcreage] = useState("");
+  const [status, setStatus] = useState("");
   return (
     <form className="space-y-6">
       <div>
