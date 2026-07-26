@@ -11,9 +11,9 @@ export default function DashboardCard({
 }: DashboardCardProps) {
   return (
     <Card>
-      <h3>{title}</h3>
+      <h3 className="text-sm text-gray-500">{title}</h3>
 
-      <h2>{value}</h2>
+      <h2 className="mt-2 text-3xl font-bold">{value}</h2>
     </Card>
   );
 }
